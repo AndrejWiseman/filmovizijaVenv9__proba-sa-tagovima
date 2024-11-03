@@ -1,0 +1,23 @@
+
+
+<section class="m-8 flex justify-center gap-2">
+    <div class=" flex justify-normal items-center">
+    <!-- <div class="container mx-auto"> -->
+
+        <a href="/" class="link link-info">Svi filmovi i serije</a>
+
+        {% for category in categories %}
+            <h5 class="m-5 flex justify-center gap-2">
+                <a href="{% url 'category' category.slug %}" type="button" class="link link-info">{{ category.name }}</a>
+            </h5>
+        {% endfor %}
+      </div>
+</section>
+
+
+
+{#<div class="m-8 flex justify-center gap-2">#}
+{#    <a class="link link-info">Komedija</a>#}
+{#    <a class="link link-info">Horor</a>#}
+{#    <a class="link link-info">Naucna fantastika</a>#}
+{#</div>#}

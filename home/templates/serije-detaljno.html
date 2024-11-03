@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+{#    <div class="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200 max-w-96 m-auto">#}
+{#      <nav class="flex min-w-[240px] flex-col gap-1 p-1.5">#}
+
+{#        {% for f in f_detaljno %}#}
+{#            <a href="#" class="text-initial">#}
+{#              <div#}
+{##}
+{#                class="text-slate-800 flex w-full items-center rounded-md p-3 transition-all hover:bg-slate-100 focus:bg-slate-100 active:bg-slate-100"#}
+{#              >#}
+                <h1>{{ s_setaljno.title }}</h1>
+{#              </div>#}
+{#            </a>#}
+{#        {% endfor %}#}
+
+
+                  <h2>Epizode:</h2>
+                    {% for sezona, epizode in epizode_po_sezoni.items %}
+                        <h3>Sezona: {{ sezona }}</h3>
+                        <ul>
+                            {% for epizoda in epizode %}
+                                <li>Epizoda: {{ epizoda.ep }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endfor %}
+
+{#                <ul>#}
+{#                    {% for epizoda in s_setaljno.get_episodes %}#}
+{#                        <li>Sezona: {{ epizoda.sezona }}, Epizoda: {{ epizoda.ep }}</li>#}
+{#                    {% endfor %}#}
+{#                </ul>#}
+
+{#      </nav>#}
+{#    </div>#}
+
+
+{% endblock %}
