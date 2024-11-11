@@ -7,7 +7,9 @@
     <div class="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200 max-w-96 m-auto">
       <nav class="flex min-w-[240px] flex-col gap-1 p-1.5">
 
-        {% for film in filmovi %}
+
+
+        {% for film in page_obj %}
             <a href="{{ film.get_absolute_url }}" class="text-initial">
               <div
                 role="button"
@@ -17,6 +19,8 @@
               </div>
             </a>
         {% endfor %}
+
+      <c-pagination />
 
       </nav>
     </div>

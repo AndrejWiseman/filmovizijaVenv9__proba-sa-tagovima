@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     'django_cotton',
 
     'home',
+    'lista',
 ]
 
 MIDDLEWARE = [

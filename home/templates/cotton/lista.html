@@ -2,7 +2,7 @@
 <div class="relative flex flex-col rounded-lg bg-white shadow-sm border border-slate-200 max-w-96 m-auto">
   <nav class="flex min-w-[240px] flex-col gap-1 p-1.5">
 
-    {% for qs in queryset %}
+    {% for qs in page_obj %}
         <a href="{{ qs.get_absolute_url }}" class="text-initial">
           <div
             role="button"
@@ -12,6 +12,10 @@
           </div>
         </a>
     {% endfor %}
+
+  <div class="p-5 flex justify-center">
+    <c-pagination />
+  </div>
 
   </nav>
 </div>
